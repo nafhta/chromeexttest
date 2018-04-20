@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Historia veterinaria</title>
+
+    <style type="text/css">
+      
+    /* Customize container */
+      .container {
+          width: 1000px;
+          max-width: 60rem;
+      }
+             
+      .panel-primary {
+          border-color: #d4d4d4;
+      }
+
+      .panel-primary > .card-header {
+        border-color: #dadada
+      }
+
+    .bd-callout-info {
+        border-left-color: #5bc0de;
+    }
+    
+    .bd-callout {
+        padding: 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid #eee;
+        border-left-width: .25rem;
+        border-radius: .25rem;
+    }
+
+
+    </style>
+
+
+      <style type="text/css" >
+
+
+              
+      </style>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="data.js" ></script>
+    <script type="text/javascript" src="history.js"></script>
+
+    <!-- Custom styles for this template -->
+    
+  </head>
+
+  <body>
+  
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Volver atrás <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¿Cómo funciona?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Woctor sin conexion</h3>
+      </div>
+
+      <div class="bd-callout bd-callout-info">
+      <strong>Info!</strong>
+      Solo se ingresa el número de identificación, al sincronizarse online se detectará automaticamente el paciente, si este no existe se creará automaticamente.
+      </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card text-center">
+              <div class="card-header">
+                <h3 class="card-title">Datos básicos propietario </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-block">
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="doc">Número de identificación</label>
+                      <input type="text" category="info_paciente" placeholder="identificación" class="form-control" name="doc" id="doc" required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Nombres propietario</label>
+                      <input type="text" category="info_paciente" id="nombre" class="form-control" name="propietario" >
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Apellidos</label>
+                      <input type="text" category="info_paciente" id="apellidos" class="form-control" name="apellidos" >
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Correo electronico</label>
+                      <input type="text" category="info_paciente" id="email" class="form-control" name="correo" >
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Dirección</label>
+                      <input type="text" category="info_paciente" id="direccion" class="form-control" name="direccion">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Número célular</label>
+                      <input type="text" category="info_paciente" id="celular" class="form-control" name="celular"  >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card text-center">
+              <div class="card-header">
+                <h3 class="card-title">Datos mascota</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-block">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Nombre paciente *</label>
+                      <input required type="|text" class="form-control"  id="nombre_paciente" name="nombre_paciente" category="pet_info">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Edad (Años) * </label>
+                      <input required type="text" class="form-control" id="edad_paciente" name="edad_paciente" category="pet_info">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Color *</label>
+                      <input required type="text"  id="color_paciente" name="color_paciente" class="form-control" category="pet_info">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Especie</label>
+                      <select required class="form-control" id="especie_paciente" name="especie_mascota" category="pet_info">
+                        <option value="">Seleccione</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Raza</label>
+                    <select required class="form-control" id="raza_paciente" name="raza_paciente" category="pet_info"></select>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Sexo</label>
+                    <div class="checkbox">
+                      <label><input required type="radio" name="sexo_paciente" value="M" category="pet_info">Macho</label><br>
+                      <label><input required type="radio" name="sexo_paciente" value="H" category="pet_info">Hembra </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Esterilizado</label>
+                    <div class="checkbox">
+                      <input  type="checkbox" name="esterilizado_paciente" value="esterilizado" category="pet_info">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12" id="vacunas_felinas" style="display:none;">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"> Vacunas Felinas</h3>
+            </div>
+            <div class="card-block">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="triple_felina" value="triple Felina" category="vaccine">Triple Felina (Rinotraquetitis Viral Felina, Calcivirus Felino,)</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="panleucopenia_felina" value="panleucopenia Felina" category="vaccine">Panleucopenia Felina</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="leucemia_felina" value="leucemia Felina" category="vaccine">leucemia Felina</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="rabia" value="rabia" category="vaccine">Rabia</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="otras" value="otras" category="vaccine">Otras</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12" id="vacunas_caninas" style="display:none;">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title"> Vacunas Caninas</h3>
+            </div>
+            <div class="card-block">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <!-- Caninos -->
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="tos de las perreras" value="tos de las perreras" category="vaccine">Tos de las perreras</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="Parvovirus" value="parvovirus" category="vaccine">Parvovirus</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="moquillo_canino" value="moquillo canino (distemper)" category="vaccine">Moquillo canino (distemper)</label>
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" name="coronavirus" value="coronavirus" category="vaccine">Coronavirus</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="pentavalente" value="triple_canina" category="vaccine">Pentavalente</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="hepatitis infecciosa canina" value="hepatitis infecciosa canina" category="vaccine">Hepatitis infecciosa canina</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="parainfluenza canina" value="parainfluenza canina" category="vaccine">Parainfluenza canina</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="leptospira" value="leptospira" category="vaccine">Leptospira</label>
+                  </div>
+                  <div class="checkbox">
+                    <label><input type="checkbox" name="rabia" value="rabia" category="vaccine">Rabia</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card text-center">
+            <div class="card-header">
+              <h3 class="card-title">
+              Exámen Fisico
+              </h3>
+              <div class="box-tools pull-right">
+                </button>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-block">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Temperatura</label>
+                    <input type="text" class="form-control" name="temperatura_mascota" category="physical_exam" value="N/A">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Frec. del pulso:</label>
+                    <input type="text" class="form-control" name="frec_pulso" category="physical_exam" value="N/A">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Caracteristica. del pulso:</label>
+                    <input type="text" class="form-control" name="caracteristica_del_pulso" category="physical_exam" value="N/A">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Frec. cardíaca:</label>
+                    <input type="text" class="form-control" name="frec_cardicada" category="physical_exam" value="N/A">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Frec. respiratorio:</label>
+                    <input type="text" class="form-control" name="frec_respiratoria" category="physical_exam" value="N/A">
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label>Peso (KG):</label>
+                    <input type="text" class="form-control" name="peso_mascota" category="physical_exam" value="N/A">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card text-center">
+            <div class="card-header">
+              <h3 class="card-title">
+              ANAMNESIS
+              </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-block">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Motivo por el cual se presentó la consulta*</label>
+                    <textarea required class="form-control" name="motivo_consulta" category="anamnesis"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Lista de problemas</label>
+                    <textarea class="form-control" name="lista_problemas" category="anamnesis"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Lista maestra</label>
+                    <textarea class="form-control" name="lista_maestra" category="anamnesis"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Diagnostico diferencial para cada problema</label>
+                    <textarea class="form-control" name="diagnostico_diferencial" category="anamnesis"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Pruebas diagnosticas recomendadas</label>
+                    <textarea class="form-control" name="diagnosticas_recomendadas" category="anamnesis"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Tratamiento</label>
+                    <textarea class="form-control" name="tratamiento" category="anamnesis"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Dieta</label>
+                    <textarea class="form-control" name="dieta" category="anamnesis"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <input type="button"  id="bntSaveData" class="btn btn-default"  value="Guardar historia"/>
+
+
+      <footer class="footer">
+        <p>&copy; Woctor 2018</p>
+      </footer>
+
+    </div>
+  </body>
+</html>
